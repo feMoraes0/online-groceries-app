@@ -36,18 +36,21 @@ const styles = StyleSheet.create({
     paddingBottom: 50.84,
   },
   title: {
-    fontFamily: 'Poppins-Medium',
+    fontFamily: 'Mulish-SemiBold',
     marginTop: 35.66,
+    marginBottom: 19.0,
     fontSize: 48.0,
+    lineHeight: 50.0,
     color: 'white',
     textAlign: 'center',
-    width: width / 1.5,
+    width: width / 1.65,
   },
   subtitle: {
     marginBottom: 40.88,
-    fontFamily: 'Poppins-Regular',
+    fontFamily: 'Mulish-Regular',
     color: 'rgba(252, 252, 252, 0.7)',
     fontSize: 16.0,
+    lineHeight: 16.0,
   },
 });
 
