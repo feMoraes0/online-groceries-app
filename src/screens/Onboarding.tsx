@@ -2,13 +2,21 @@ import React from 'react';
 import {View, Text, Image, Dimensions} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import Button from '../components/Button';
+import Signin from './Signin';
 
 const backgroundImage = require('../../assets/images/onboarding-background.png');
 const logoImage = require('../../assets/images/logo.png');
 
 const {width: screenWidth, height: screenHeight} = Dimensions.get('screen');
+interface OnboardingProps {
+  navigation: any;
+}
 
-const Onboarding = () => {
+const Onboarding = ({navigation}: OnboardingProps) => {
+  const nextScreen = () => {
+    navigation.navigate(Signin.name);
+  };
+
   return (
     <>
       <Image style={styles.backgroundImage} source={backgroundImage} />
@@ -19,10 +27,7 @@ const Onboarding = () => {
         <Text style={styles.subtitle}>
           Get your groceries in as fast as one hour
         </Text>
-        <Button
-          text="Get Started"
-          backgroundColor={EStyleSheet.value('$greenColour')}
-        />
+        <Button onPress={() => nextScreen()} text="Get Started" />
       </View>
     </>
   );

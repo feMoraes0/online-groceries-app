@@ -5,12 +5,12 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 const {height: screenHeight} = Dimensions.get('screen');
 interface ButtonProps {
   text: string;
-  backgroundColor: string;
+  onPress: () => void;
 }
 
-const Button = ({text, backgroundColor}: ButtonProps) => {
+const Button = ({text, onPress}: ButtonProps) => {
   return (
-    <TouchableOpacity style={[styles.button, {backgroundColor}]}>
+    <TouchableOpacity onPress={onPress} style={styles.button}>
       <Text style={styles.buttonText}>{text}</Text>
     </TouchableOpacity>
   );
@@ -24,6 +24,7 @@ const styles = EStyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
+    backgroundColor: '$greenColour',
   },
   buttonText: {
     fontFamily: 'Poppins-Medium',
