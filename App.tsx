@@ -10,6 +10,7 @@
 
 import React from 'react';
 import {StatusBar} from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
 import Onboarding from './src/screens/Onboarding';
 
 const App = () => {
@@ -20,5 +21,9 @@ const App = () => {
     </>
   );
 };
+
+EStyleSheet.build({
+  $greenColour: '#53B175',
+});
 
 export default App;

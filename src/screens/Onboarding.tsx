@@ -1,56 +1,64 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet, Dimensions} from 'react-native';
+import {View, Text, Image, Dimensions} from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
 import Button from '../components/Button';
 
-const {width} = Dimensions.get('screen');
 const backgroundImage = require('../../assets/images/onboarding-background.png');
 const logoImage = require('../../assets/images/logo.png');
+
+const {width: screenWidth, height: screenHeight} = Dimensions.get('screen');
 
 const Onboarding = () => {
   return (
     <>
       <Image style={styles.backgroundImage} source={backgroundImage} />
       <View style={styles.footer}>
-        <Image source={logoImage} />
-        <Text style={styles.title}>Welcome to our store</Text>
+        <Image style={styles.logoImage} source={logoImage} />
+        <Text style={styles.title}>Welcome</Text>
+        <Text style={styles.title}>to our store</Text>
         <Text style={styles.subtitle}>
           Get your groceries in as fast as one hour
         </Text>
-        <Button text="Get Started" backgroundColor="#53B175" />
+        <Button
+          text="Get Started"
+          backgroundColor={EStyleSheet.value('$greenColour')}
+        />
       </View>
     </>
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   backgroundImage: {
-    width: width * 1.005,
+    width: screenWidth,
     resizeMode: 'cover',
   },
   footer: {
     position: 'absolute',
     bottom: 0,
-    width: width,
+    width: screenWidth,
     alignItems: 'center',
-    paddingHorizontal: 30.5,
-    paddingBottom: 50.84,
+    paddingHorizontal: screenWidth * 0.073,
+    paddingBottom: screenHeight * 0.057,
+  },
+  logoImage: {
+    marginBottom: screenHeight * 0.039,
   },
   title: {
     fontFamily: 'Mulish-SemiBold',
-    marginTop: 35.66,
-    marginBottom: 19.0,
-    fontSize: 48.0,
-    lineHeight: 50.0,
+    fontSize: '3rem',
+    lineHeight: '3rem',
+    height: '3rem',
     color: 'white',
     textAlign: 'center',
-    width: width / 1.65,
   },
   subtitle: {
-    marginBottom: 40.88,
+    marginTop: screenHeight * 0.021,
+    marginBottom: screenHeight * 0.045,
     fontFamily: 'Mulish-Regular',
     color: 'rgba(252, 252, 252, 0.7)',
-    fontSize: 16.0,
-    lineHeight: 16.0,
+    fontSize: '1rem',
+    lineHeight: '1rem',
   },
 });
 

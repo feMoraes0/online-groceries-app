@@ -1,6 +1,8 @@
 import React from 'react';
-import {TouchableOpacity, Text, StyleSheet} from 'react-native';
+import {TouchableOpacity, Text, Dimensions} from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
+const {height} = Dimensions.get('screen');
 interface ButtonProps {
   text: string;
   backgroundColor: string;
@@ -14,11 +16,11 @@ const Button = ({text, backgroundColor}: ButtonProps) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = EStyleSheet.create({
   button: {
     width: '100%',
     borderRadius: 19.0,
-    paddingVertical: 24.5,
+    paddingVertical: height * 0.027,
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
@@ -26,7 +28,9 @@ const styles = StyleSheet.create({
   buttonText: {
     fontFamily: 'Poppins-Medium',
     color: 'white',
-    fontSize: 18.0,
+    fontSize: '1.125rem',
+    lineHeight: '1.3rem',
+    height: '1.125rem',
   },
 });
 
