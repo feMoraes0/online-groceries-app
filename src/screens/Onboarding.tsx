@@ -62,4 +62,4 @@ const styles = EStyleSheet.create({
   },
 });
 
-export default Onboarding;
+export default {component: Onboarding, name: 'Onboarding'};
