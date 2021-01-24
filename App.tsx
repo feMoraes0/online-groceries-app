@@ -7,17 +7,25 @@
  *
  * @format
  */
-
+import 'react-native-gesture-handler';
 import React from 'react';
 import {StatusBar} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import Onboarding from './src/screens/Onboarding';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+
+const {Navigator, Screen} = createStackNavigator();
 
 const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <Onboarding />
+      <NavigationContainer>
+        <Navigator>
+          <Screen name="Onboarding" component={Onboarding} />
+        </Navigator>
+      </NavigationContainer>
     </>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import {TouchableOpacity, Text, Dimensions} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-const {height} = Dimensions.get('screen');
+const {height: screenHeight} = Dimensions.get('screen');
 interface ButtonProps {
   text: string;
   backgroundColor: string;
@@ -20,7 +20,7 @@ const styles = EStyleSheet.create({
   button: {
     width: '100%',
     borderRadius: 19.0,
-    paddingVertical: height * 0.027,
+    paddingVertical: screenHeight * 0.027,
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
