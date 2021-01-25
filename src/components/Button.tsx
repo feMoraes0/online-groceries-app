@@ -30,8 +30,8 @@ const styles = EStyleSheet.create({
     fontFamily: 'Poppins-Medium',
     color: 'white',
     fontSize: '1.125rem',
-    lineHeight: '1.3rem',
-    height: '1.125rem',
+    lineHeight: '1.25rem',
+    height: '1.25rem',
   },
 });
 
