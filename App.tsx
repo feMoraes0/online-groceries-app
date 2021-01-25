@@ -28,6 +28,7 @@ const App = () => {
 
 EStyleSheet.build({
   $greenColour: '#53B175',
+  $blackColour: '#181725',
 });
 
 export default App;
