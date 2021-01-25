@@ -1,43 +1,51 @@
 import React from 'react';
-import {View, Text, Image, TouchableOpacity, Dimensions} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  KeyboardAvoidingView,
+  Platform,
+  Dimensions,
+} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import Button from '../components/Button';
 import Input from '../components/Input';
 import SignScaffold from '../components/SignScaffold';
 
-const {width: widthScreen, height: heightScreen} = Dimensions.get('screen');
+const {width: widthScreen, height: heightScreen} = Dimensions.get('window');
 const logo = require('../../assets/images/logo-colour.png');
 
 const Signin = () => {
+  const behavior = Platform.OS === 'ios' ? 'padding' : undefined;
   return (
-    <>
-      <SignScaffold>
-        <Image style={styles.logo} source={logo} />
-        <View style={styles.form}>
-          <View>
-            <Text style={styles.headerTitle}>Loging</Text>
-            <Text style={styles.headerSubtitle}>
-              Enter your emails and password
-            </Text>
-          </View>
+    <SignScaffold>
+      <Image style={styles.logo} source={logo} />
+      <View style={styles.form}>
+        <View>
+          <Text style={styles.headerTitle}>Loging</Text>
+          <Text style={styles.headerSubtitle}>
+            Enter your emails and password
+          </Text>
+        </View>
+        <KeyboardAvoidingView behavior={behavior}>
           <Input label="Email" />
           <View style={{marginTop: heightScreen * 0.011}} />
           <Input label="Password" />
-          <TouchableOpacity style={styles.forgotButtonBox}>
-            <Text style={styles.infoText}>Forgot your password?</Text>
+        </KeyboardAvoidingView>
+
+        <TouchableOpacity style={styles.forgotButtonBox}>
+          <Text style={styles.infoText}>Forgot your password?</Text>
+        </TouchableOpacity>
+        <Button onPress={() => null} text="Log in" />
+        <View style={styles.footer}>
+          <Text style={styles.infoText}>Don’t have an account?</Text>
+          <TouchableOpacity>
+            <Text style={[styles.infoText, styles.greenInfoText]}>Singup</Text>
           </TouchableOpacity>
-          <Button onPress={() => null} text="Log in" />
-          <View style={styles.footer}>
-            <Text style={styles.infoText}>Don’t have an account?</Text>
-            <TouchableOpacity>
-              <Text style={[styles.infoText, styles.greenInfoText]}>
-                Singup
-              </Text>
-            </TouchableOpacity>
-          </View>
         </View>
-      </SignScaffold>
-    </>
+      </View>
+    </SignScaffold>
   );
 };
 
@@ -80,7 +88,7 @@ const styles = EStyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: heightScreen * 0.028,
+    marginVertical: heightScreen * 0.028,
   },
   greenInfoText: {
     color: '$greenColour',

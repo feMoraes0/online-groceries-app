@@ -1,10 +1,9 @@
 import React from 'react';
-import {View, Image, Dimensions} from 'react-native';
+import {ScrollView, View, Image, Dimensions} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-const {width: screenWidth, height: screenHeight} = Dimensions.get('screen');
+const {width: screenWidth} = Dimensions.get('screen');
 const backgroundTop = require('../../assets/images/sign/background-top.png');
-const backgroundBottom = require('../../assets/images/sign/background-bottom.png');
 
 interface SignScaffoldProps {
   children: React.ReactNode;
@@ -12,26 +11,22 @@ interface SignScaffoldProps {
 
 const SignScaffold = ({children}: SignScaffoldProps) => {
   return (
-    <>
+    <ScrollView style={styles.container}>
       <View style={styles.background}>
-        <Image source={backgroundTop} />
-        <Image source={backgroundBottom} />
+        <Image style={styles.backgroundImage} source={backgroundTop} />
       </View>
-      <View style={styles.container}>{children}</View>
-    </>
+      <View>{children}</View>
+    </ScrollView>
   );
 };
 
 const styles = EStyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: 'transparent',
+    backgroundColor: 'white',
   },
   background: {
     position: 'absolute',
     width: screenWidth,
-    height: screenHeight,
-    backgroundColor: 'white',
     flexDirection: 'column',
     justifyContent: 'space-between',
   },
