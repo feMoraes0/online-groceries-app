@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, Image, Dimensions} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import Button from '../components/Button';
-import Signin from './Signin';
+import SignIn from './SignIn';
 
 const backgroundImage = require('../../assets/images/onboarding-background.png');
 const logoImage = require('../../assets/images/logo.png');
@@ -14,7 +14,7 @@ interface OnboardingProps {
 
 const Onboarding = ({navigation}: OnboardingProps) => {
   const nextScreen = () => {
-    navigation.navigate(Signin.name);
+    navigation.navigate(SignIn.name);
   };
 
   return (

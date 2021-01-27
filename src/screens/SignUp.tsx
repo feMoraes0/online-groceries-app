@@ -12,7 +12,7 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 import Button from '../components/Button';
 import Input from '../components/Input';
 import SignScaffold from '../components/SignScaffold';
-import Signin from './Signin';
+import SignIn from './SignIn';
 
 const {width: widthScreen, height: heightScreen} = Dimensions.get('window');
 const logo = require('../../assets/images/logo-colour.png');
@@ -25,7 +25,7 @@ const SignUp = ({navigation}: SignUpProps) => {
   const behavior = Platform.OS === 'ios' ? 'padding' : undefined;
 
   const goToSignIn = () => {
-    navigation.navigate(Signin.name);
+    navigation.navigate(SignIn.name);
   };
 
   return (
