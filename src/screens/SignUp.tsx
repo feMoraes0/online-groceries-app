@@ -13,6 +13,7 @@ import Button from '../components/Button';
 import Input from '../components/Input';
 import SignScaffold from '../components/SignScaffold';
 import SignIn from './SignIn';
+import Tabs from './Tabs';
 
 const {width: widthScreen, height: heightScreen} = Dimensions.get('window');
 const logo = require('../../assets/images/logo-colour.png');
@@ -26,6 +27,10 @@ const SignUp = ({navigation}: SignUpProps) => {
 
   const goToSignIn = () => {
     navigation.navigate(SignIn.name);
+  };
+
+  const goToHome = () => {
+    navigation.navigate(Tabs.name);
   };
 
   return (
@@ -59,7 +64,7 @@ const SignUp = ({navigation}: SignUpProps) => {
             .
           </Text>
         </View>
-        <Button onPress={() => null} text="Sign up" />
+        <Button onPress={goToHome} text="Sign up" />
         <View style={styles.footer}>
           <Text style={styles.infoText}>Already have an account?</Text>
           <TouchableOpacity onPress={goToSignIn}>
