@@ -17,23 +17,27 @@ const Tabs = () => {
   return (
     <Navigator
       screenOptions={({route}) => ({
-        tabBarIcon: () => {
+        tabBarIcon: ({color}) => {
           switch (route.name) {
             case Home.name:
-              return <ShopIcon />;
+              return <ShopIcon color={color} />;
             case Account.name:
-              return <PersonIcon />;
+              return <PersonIcon color={color} />;
             case Cart.name:
-              return <CartIcon />;
+              return <CartIcon color={color} />;
             case Explore.name:
-              return <ExploreSearchIcon />;
+              return <ExploreSearchIcon color={color} />;
             case Favourite.name:
-              return <HeartIcon />;
+              return <HeartIcon color={color} />;
             default:
-              return <ShopIcon />;
+              return <ShopIcon color={color} />;
           }
         },
-      })}>
+      })}
+      tabBarOptions={{
+        activeTintColor: '#53B175',
+        inactiveTintColor: '#181725',
+      }}>
       <Screen name={Home.name} component={Home.component} />
       <Screen name={Cart.name} component={Cart.component} />
       <Screen name={Explore.name} component={Explore.component} />
