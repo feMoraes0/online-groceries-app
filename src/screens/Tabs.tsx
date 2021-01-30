@@ -5,11 +5,8 @@ import Account from './tabs/Account';
 import Cart from './tabs/Cart';
 import Explore from './tabs/Explore';
 import Favourite from './tabs/Favourite';
-import ShopIcon from '../../assets/icons/shop.svg';
-import PersonIcon from '../../assets/icons/person.svg';
-import CartIcon from '../../assets/icons/cart.svg';
-import ExploreSearchIcon from '../../assets/icons/explore-search.svg';
-import HeartIcon from '../../assets/icons/heart.svg';
+import tabIcon from '../helpers/Icons';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 const {Navigator, Screen} = createBottomTabNavigator();
 
@@ -20,23 +17,24 @@ const Tabs = () => {
         tabBarIcon: ({color}) => {
           switch (route.name) {
             case Home.name:
-              return <ShopIcon color={color} />;
+              return <tabIcon.ShopIcon color={color} />;
             case Account.name:
-              return <PersonIcon color={color} />;
+              return <tabIcon.PersonIcon color={color} />;
             case Cart.name:
-              return <CartIcon color={color} />;
+              return <tabIcon.CartIcon color={color} />;
             case Explore.name:
-              return <ExploreSearchIcon color={color} />;
+              return <tabIcon.ExploreSearchIcon color={color} />;
             case Favourite.name:
-              return <HeartIcon color={color} />;
+              return <tabIcon.HeartIcon color={color} />;
             default:
-              return <ShopIcon color={color} />;
+              return <tabIcon.ShopIcon color={color} />;
           }
         },
       })}
       tabBarOptions={{
         activeTintColor: '#53B175',
         inactiveTintColor: '#181725',
+        labelStyle: style.tabBarLabelStyle,
       }}>
       <Screen name={Home.name} component={Home.component} />
       <Screen name={Cart.name} component={Cart.component} />
@@ -46,5 +44,12 @@ const Tabs = () => {
     </Navigator>
   );
 };
+
+const style = EStyleSheet.create({
+  tabBarLabelStyle: {
+    fontFamily: 'Mulish-Medium',
+    fontSize: '0.75rem',
+  },
+});
 
 export default {component: Tabs, name: 'Tabs'};
