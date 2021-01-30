@@ -9,6 +9,7 @@ import HelpIcon from '../../assets/icons/account/help.svg';
 import LogoutIcon from '../../assets/icons/account/logout.svg';
 import OrdersIcon from '../../assets/icons/account/orders.svg';
 import PaymentIcon from '../../assets/icons/account/payment.svg';
+import PencilIcon from '../../assets/icons/account/pencil.svg';
 import PersonalCardIcon from '../../assets/icons/account/personal_card.svg';
 import PinIcon from '../../assets/icons/account/pin.svg';
 import TicketIcon from '../../assets/icons/account/ticket.svg';
@@ -21,6 +22,7 @@ const AccountIcons = {
   LogoutIcon,
   OrdersIcon,
   PaymentIcon,
+  PencilIcon,
   PersonalCardIcon,
   PinIcon,
   TicketIcon,
