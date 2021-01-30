@@ -5,7 +5,7 @@ import Account from './tabs/Account';
 import Cart from './tabs/Cart';
 import Explore from './tabs/Explore';
 import Favourite from './tabs/Favourite';
-import tabIcon from '../helpers/Icons';
+import {tabIcons} from '../helpers/Icons';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 const {Navigator, Screen} = createBottomTabNavigator();
@@ -17,17 +17,17 @@ const Tabs = () => {
         tabBarIcon: ({color}) => {
           switch (route.name) {
             case Home.name:
-              return <tabIcon.ShopIcon color={color} />;
+              return <tabIcons.ShopIcon color={color} />;
             case Account.name:
-              return <tabIcon.PersonIcon color={color} />;
+              return <tabIcons.PersonIcon color={color} />;
             case Cart.name:
-              return <tabIcon.CartIcon color={color} />;
+              return <tabIcons.CartIcon color={color} />;
             case Explore.name:
-              return <tabIcon.ExploreSearchIcon color={color} />;
+              return <tabIcons.ExploreSearchIcon color={color} />;
             case Favourite.name:
-              return <tabIcon.HeartIcon color={color} />;
+              return <tabIcons.HeartIcon color={color} />;
             default:
-              return <tabIcon.ShopIcon color={color} />;
+              return <tabIcons.ShopIcon color={color} />;
           }
         },
       })}
