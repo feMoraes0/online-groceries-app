@@ -12,7 +12,6 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 import Button from '../components/Button';
 import Input from '../components/Input';
 import SignScaffold from '../components/SignScaffold';
-import SignIn from './SignIn';
 import Tabs from './Tabs';
 
 const {width: widthScreen, height: heightScreen} = Dimensions.get('window');
@@ -26,7 +25,7 @@ const SignUp = ({navigation}: SignUpProps) => {
   const behavior = Platform.OS === 'ios' ? 'padding' : undefined;
 
   const goToSignIn = () => {
-    navigation.navigate(SignIn.name);
+    navigation.pop();
   };
 
   const goToHome = () => {
