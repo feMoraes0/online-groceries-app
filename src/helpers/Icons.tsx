@@ -12,6 +12,7 @@ import PaymentIcon from '../../assets/icons/account/payment.svg';
 import PencilIcon from '../../assets/icons/account/pencil.svg';
 import PersonalCardIcon from '../../assets/icons/account/personal_card.svg';
 import PinIcon from '../../assets/icons/account/pin.svg';
+import RightArrowIcon from '../../assets/icons/account/right_arrow.svg';
 import TicketIcon from '../../assets/icons/account/ticket.svg';
 
 const tabIcons = {ShopIcon, PersonIcon, CartIcon, ExploreSearchIcon, HeartIcon};
@@ -25,6 +26,7 @@ const AccountIcons = {
   PencilIcon,
   PersonalCardIcon,
   PinIcon,
+  RightArrowIcon,
   TicketIcon,
 };
 

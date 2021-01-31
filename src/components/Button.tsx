@@ -5,13 +5,17 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 const {height: screenHeight} = Dimensions.get('screen');
 interface ButtonProps {
   text: string;
+  bgColour: string;
+  txtColour: string;
   onPress: () => void;
 }
 
-const Button = ({text, onPress}: ButtonProps) => {
+const Button = ({text, bgColour, txtColour, onPress}: ButtonProps) => {
   return (
-    <TouchableOpacity onPress={onPress} style={styles.button}>
-      <Text style={styles.buttonText}>{text}</Text>
+    <TouchableOpacity
+      onPress={onPress}
+      style={[styles.button, {backgroundColor: bgColour}]}>
+      <Text style={[styles.buttonText, {color: txtColour}]}>{text}</Text>
     </TouchableOpacity>
   );
 };
