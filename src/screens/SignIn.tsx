@@ -56,7 +56,7 @@ const Signin = ({navigation}: SignInProps) => {
           onPress={goToHome}
           bgColour="#53B175"
           txtColour="#FFF"
-          text="Log in"
+          text="Sign in"
         />
         <View style={styles.footer}>
           <Text style={styles.infoText}>Don’t have an account?</Text>
