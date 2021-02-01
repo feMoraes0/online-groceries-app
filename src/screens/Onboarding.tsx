@@ -27,7 +27,12 @@ const Onboarding = ({navigation}: OnboardingProps) => {
         <Text style={styles.subtitle}>
           Get your groceries in as fast as one hour
         </Text>
-        <Button onPress={() => nextScreen()} text="Get Started" />
+        <Button
+          onPress={() => nextScreen()}
+          bgColour="#53B175"
+          txtColour="#FFF"
+          text="Get Started"
+        />
       </View>
     </>
   );

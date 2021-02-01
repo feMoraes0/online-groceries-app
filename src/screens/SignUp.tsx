@@ -63,7 +63,12 @@ const SignUp = ({navigation}: SignUpProps) => {
             .
           </Text>
         </View>
-        <Button onPress={goToHome} text="Sign up" />
+        <Button
+          onPress={goToHome}
+          bgColour="#53B175"
+          txtColour="#FFF"
+          text="Sign up"
+        />
         <View style={styles.footer}>
           <Text style={styles.infoText}>Already have an account?</Text>
           <TouchableOpacity onPress={goToSignIn}>

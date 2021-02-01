@@ -52,7 +52,12 @@ const Signin = ({navigation}: SignInProps) => {
         <TouchableOpacity style={styles.forgotButtonBox}>
           <Text style={styles.infoText}>Forgot your password?</Text>
         </TouchableOpacity>
-        <Button onPress={goToHome} text="Log in" />
+        <Button
+          onPress={goToHome}
+          bgColour="#53B175"
+          txtColour="#FFF"
+          text="Log in"
+        />
         <View style={styles.footer}>
           <Text style={styles.infoText}>Don’t have an account?</Text>
           <TouchableOpacity onPress={goToSignUp}>
