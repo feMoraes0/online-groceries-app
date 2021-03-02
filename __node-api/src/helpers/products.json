@@ -1,0 +1,122 @@
+{
+  "beverages": [
+    {
+      "title": "Diet Coke",
+      "size": "355ml",
+      "price": "1.99",
+      "image": "http://localhost:8080/beverages/apple_juice.png",
+      "description": "generic description",
+      "review": 4.2
+    },
+    {
+      "title": "Sprite Can",
+      "size": "325ml",
+      "price": "1.50",
+      "image": "http://localhost:8080/beverages/apple_juice.png",
+      "description": "generic description",
+      "review": 3.5
+    },
+    {
+      "title": "Apple & Grape Juice",
+      "size": "2L",
+      "price": "15.99",
+      "image": "http://localhost:8080/beverages/apple_juice.png",
+      "description": "generic description",
+      "review": 4
+    },
+    {
+      "title": "Orange Juice",
+      "size": "2L",
+      "price": "15.99",
+      "image": "http://localhost:8080/beverages/apple_juice.png",
+      "description": "generic description",
+      "review": 4.5
+    },
+    {
+      "title": "Coca Cola Can",
+      "size": "325ml",
+      "price": "4.99",
+      "image": "http://localhost:8080/beverages/apple_juice.png",
+      "description": "generic description",
+      "review": 1.5
+    },
+    {
+      "title": "Pepsi Can",
+      "size": "330ml",
+      "price": "4.99",
+      "image": "http://localhost:8080/beverages/apple_juice.png",
+      "description": "generic description",
+      "review": 2.8
+    }
+  ],
+  "fruits_vegetables": [
+    {
+      "title": "Red Apple",
+      "size": "1kg",
+      "price": "4.99",
+      "image": "http://localhost:8080/fruits/apple_juice.png",
+      "description": "generic description",
+      "review": 5
+    },
+    {
+      "title": "Organic Banana",
+      "size": "1kg",
+      "price": "4.99",
+      "image": "http://localhost:8080/fruits/apple_juice.png",
+      "description": "generic description",
+      "review": 5
+    },
+    {
+      "title": "Bell Pepper Red",
+      "size": "1kg",
+      "price": "4.99",
+      "image": "http://localhost:8080/fruits/apple_juice.png",
+      "description": "generic description",
+      "review": 5
+    },
+    {
+      "title": "Ginger",
+      "size": "250gm",
+      "price": "4.99",
+      "image": "http://localhost:8080/fruits/apple_juice.png",
+      "description": "generic description",
+      "review": 3.3
+    }
+  ],
+  "meat": [
+    {
+      "title": "Beef Bone",
+      "size": "1kg",
+      "price": "4.99",
+      "image": "http://localhost:8080/meat/apple_juice.png",
+      "description": "generic description",
+      "review": 5
+    },
+    {
+      "title": "Boiler Chicken",
+      "size": "1kg",
+      "price": "4.99",
+      "image": "http://localhost:8080/meat/apple_juice.png",
+      "description": "generic description",
+      "review": 5
+    }
+  ],
+  "dairy": [
+    {
+      "title": "Egg Chicken Red",
+      "size": "4pcs",
+      "price": "1.99",
+      "image": "http://localhost:8080/dairy/apple_juice.png",
+      "description": "generic description",
+      "review": 5
+    },
+    {
+      "title": "Egg Chicken White",
+      "size": "180g",
+      "price": "1.59",
+      "image": "http://localhost:8080/dairy/apple_juice.png",
+      "description": "generic description",
+      "review": 5
+    }
+  ]
+}
