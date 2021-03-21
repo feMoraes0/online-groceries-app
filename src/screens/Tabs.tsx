@@ -47,7 +47,8 @@ const Tabs = () => {
 
 const style = EStyleSheet.create({
   tabBarLabelStyle: {
-    fontFamily: 'Mulish-Medium',
+    fontFamily: '$gilroyNormal600',
+    fontWeight: '600',
     fontSize: '0.75rem',
   },
 });

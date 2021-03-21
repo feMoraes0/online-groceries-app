@@ -84,7 +84,7 @@ const AccountTab = () => {
 
 const styles = EStyleSheet.create({
   scrollContainer: {
-    backgroundColor: '#FFF',
+    backgroundColor: '$whiteColour',
   },
   headerContainer: {
     flexDirection: 'row',
@@ -108,18 +108,19 @@ const styles = EStyleSheet.create({
     alignItems: 'center',
   },
   headerTitle: {
-    fontFamily: 'Mulish-SemiBold',
+    fontFamily: '$gilroyNormal600',
+    fontWeight: '600',
     fontSize: '1.125rem',
-    color: '#181725',
+    color: '$blackColour',
     marginRight: 10.0,
   },
   headerSubtitle: {
-    fontFamily: 'Mulish-Regular',
+    fontFamily: '$gilroyNormal',
     fontSize: '0.875rem',
-    color: '#7C7C7C',
+    color: '$darkGreyColour',
   },
   headerIcon: {
-    color: '#53B175',
+    color: '$greenColour',
   },
   list: {
     paddingBottom: 52.0,
