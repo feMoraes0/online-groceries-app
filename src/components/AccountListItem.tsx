@@ -39,9 +39,10 @@ const styles = EStyleSheet.create({
     alignItems: 'center',
   },
   text: {
-    fontFamily: 'Mulish-Regular',
+    fontFamily: '$gilroyNormal600',
+    fontWeight: '600',
     fontSize: '1rem',
-    color: '#181725',
+    color: '$blackColour',
     marginLeft: screenWidth * 0.048,
   },
   arrowRight: {},

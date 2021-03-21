@@ -31,7 +31,7 @@ const styles = EStyleSheet.create({
     backgroundColor: '$greenColour',
   },
   buttonText: {
-    fontFamily: 'Poppins-Medium',
+    fontFamily: '$gilroyNormal600',
     color: 'white',
     fontSize: '1.125rem',
     lineHeight: '1.25rem',

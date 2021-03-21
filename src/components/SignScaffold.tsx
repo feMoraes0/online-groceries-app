@@ -22,7 +22,7 @@ const SignScaffold = ({children}: SignScaffoldProps) => {
 
 const styles = EStyleSheet.create({
   container: {
-    backgroundColor: 'white',
+    backgroundColor: '$whiteColour',
   },
   background: {
     position: 'absolute',
