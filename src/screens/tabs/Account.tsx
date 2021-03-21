@@ -102,7 +102,7 @@ const styles = EStyleSheet.create({
     paddingTop: screenHeight * 0.023,
     paddingBottom: screenHeight * 0.033,
     borderBottomWidth: 1.0,
-    borderBottomColor: '#E2E2E2',
+    borderBottomColor: '$lightGreyColour',
   },
   headerImage: {
     width: screenHeight * 0.071,

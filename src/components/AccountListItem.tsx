@@ -29,7 +29,7 @@ const styles = EStyleSheet.create({
     paddingVertical: screenHeight * 0.02,
     paddingHorizontal: screenWidth * 0.06,
     borderBottomWidth: 1.0,
-    borderBottomColor: '#E2E2E2',
+    borderBottomColor: '$lightGreyColour',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',

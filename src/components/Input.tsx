@@ -31,7 +31,7 @@ const styles = EStyleSheet.create({
     lineHeight: '1.125rem',
     paddingVertical: heightScreen * 0.012,
     borderBottomWidth: 1.0,
-    borderBottomColor: '#E2E2E2',
+    borderBottomColor: '$lightGreyColour',
     marginBottom: heightScreen * 0.022,
   },
 });
