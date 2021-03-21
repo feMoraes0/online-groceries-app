@@ -1,24 +1,34 @@
 import React from 'react';
-import {ScrollView, View, Text, Image, TouchableOpacity} from 'react-native';
+import {
+  ScrollView,
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  Dimensions,
+} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import ProfileImage from '../../../assets/images/profile.png';
 import {AccountIcons} from '../../helpers/Icons';
 import AccountListItem from '../../components/AccountListItem';
 import Button from '../../components/Button';
 
+const {width: screenWidth, height: screenHeight} = Dimensions.get('screen');
 const AccountTab = () => {
   const itemList = [
     {
       label: 'Orders',
-      icon: <AccountIcons.OrdersIcon color={'#181725'} />,
+      icon: <AccountIcons.OrdersIcon style={styles.icon} color={'#181725'} />,
     },
     {
       label: 'My Details',
-      icon: <AccountIcons.PersonalCardIcon color={'#181725'} />,
+      icon: (
+        <AccountIcons.PersonalCardIcon style={styles.icon} color={'#181725'} />
+      ),
     },
     {
       label: 'Delivery Address',
-      icon: <AccountIcons.PinIcon color={'#181725'} />,
+      icon: <AccountIcons.PinIcon style={styles.icon} color={'#181725'} />,
     },
     {
       label: 'Payment Methods',
@@ -71,7 +81,7 @@ const AccountTab = () => {
         <View style={styles.buttonBox}>
           <Button
             onPress={() => null}
-            text="Log out"
+            text="Log Out"
             bgColour="#F2F3F2"
             txtColour="#53B175"
           />
@@ -88,19 +98,19 @@ const styles = EStyleSheet.create({
   headerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingHorizontal: 25.0,
-    paddingTop: 21.0,
-    paddingBottom: 30.0,
+    paddingHorizontal: screenWidth * 0.06,
+    paddingTop: screenHeight * 0.023,
+    paddingBottom: screenHeight * 0.033,
     borderBottomWidth: 1.0,
     borderBottomColor: '#E2E2E2',
   },
   headerImage: {
-    width: 64.0,
-    height: 64.0,
+    width: screenHeight * 0.071,
+    height: screenHeight * 0.071,
     borderRadius: 27.0,
   },
   textBox: {
-    marginLeft: 25.0,
+    marginLeft: screenWidth * 0.05,
   },
   headerTitleBox: {
     flexDirection: 'row',
@@ -111,7 +121,7 @@ const styles = EStyleSheet.create({
     fontWeight: '600',
     fontSize: '1.125rem',
     color: '$blackColour',
-    marginRight: 10.0,
+    marginRight: screenWidth * 0.024,
   },
   headerSubtitle: {
     fontFamily: '$gilroyNormal',
@@ -122,11 +132,14 @@ const styles = EStyleSheet.create({
     color: '$greenColour',
   },
   list: {
-    paddingBottom: 52.0,
+    paddingBottom: screenHeight * 0.058,
   },
   buttonBox: {
-    paddingBottom: 25.0,
-    paddingHorizontal: 25.0,
+    paddingBottom: screenHeight * 0.027,
+    paddingHorizontal: screenWidth * 0.06,
+  },
+  icon: {
+    color: '#F00',
   },
 });
 

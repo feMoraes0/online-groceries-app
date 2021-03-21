@@ -1,8 +1,9 @@
 import React from 'react';
-import {TouchableOpacity, View, Text} from 'react-native';
+import {TouchableOpacity, View, Text, Dimensions} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import {AccountIcons} from '../helpers/Icons';
 
+const {width: screenWidth, height: screenHeight} = Dimensions.get('screen');
 interface AccountListItemProps {
   label: string;
   children: JSX.Element;
@@ -25,8 +26,8 @@ const AccountListItem = ({label, children}: AccountListItemProps) => {
 
 const styles = EStyleSheet.create({
   container: {
-    paddingVertical: 20.0,
-    paddingHorizontal: 25.0,
+    paddingVertical: screenHeight * 0.02,
+    paddingHorizontal: screenWidth * 0.06,
     borderBottomWidth: 1.0,
     borderBottomColor: '#E2E2E2',
     flexDirection: 'row',
@@ -41,7 +42,7 @@ const styles = EStyleSheet.create({
     fontFamily: 'Mulish-Regular',
     fontSize: '1rem',
     color: '#181725',
-    marginLeft: 20.0,
+    marginLeft: screenWidth * 0.048,
   },
   arrowRight: {},
 });
