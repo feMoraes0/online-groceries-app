@@ -2,13 +2,14 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import {StatusBar} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
-import Onboarding from './src/screens/Onboarding';
-import SignIn from './src/screens/SignIn';
-import SignUp from './src/screens/SignUp';
-import Tabs from './src/screens/Tabs';
+import theme from './theme';
+import Onboarding from './screens/Onboarding';
+import SignIn from './screens/SignIn';
+import SignUp from './screens/SignUp';
+import Tabs from './screens/Tabs';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import OrderAccepted from './src/screens/status/OrderAccepted';
+import OrderAccepted from './screens/status/OrderAccepted';
 
 const {Navigator, Screen} = createStackNavigator();
 
@@ -18,7 +19,7 @@ const App = () => {
       <StatusBar barStyle="dark-content" />
       <NavigationContainer>
         <Navigator
-          initialRouteName={OrderAccepted.name}
+          // initialRouteName={OrderAccepted.name}
           screenOptions={{
             headerShown: false,
           }}>
@@ -38,9 +39,6 @@ const App = () => {
   );
 };
 
-EStyleSheet.build({
-  $greenColour: '#53B175',
-  $blackColour: '#181725',
-});
+EStyleSheet.build({...theme});
 
 export default App;
