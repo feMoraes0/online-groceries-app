@@ -1,11 +1,10 @@
 import React from 'react';
-import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {ScrollView, View, Text, Image, TouchableOpacity} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 import ProfileImage from '../../../assets/images/profile.png';
 import {AccountIcons} from '../../helpers/Icons';
 import AccountListItem from '../../components/AccountListItem';
 import Button from '../../components/Button';
-import {ScrollView} from 'react-native-gesture-handler';
 
 const AccountTab = () => {
   const itemList = [
