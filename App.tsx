@@ -8,6 +8,7 @@ import SignUp from './src/screens/SignUp';
 import Tabs from './src/screens/Tabs';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import OrderAccepted from './src/screens/status/OrderAccepted';
 
 const {Navigator, Screen} = createStackNavigator();
 
@@ -17,6 +18,7 @@ const App = () => {
       <StatusBar barStyle="dark-content" />
       <NavigationContainer>
         <Navigator
+          initialRouteName={OrderAccepted.name}
           screenOptions={{
             headerShown: false,
           }}>
@@ -24,6 +26,12 @@ const App = () => {
           <Screen name={SignIn.name} component={SignIn.component} />
           <Screen name={SignUp.name} component={SignUp.component} />
           <Screen name={Tabs.name} component={Tabs.component} />
+
+          {/* Temporary */}
+          <Screen
+            name={OrderAccepted.name}
+            component={OrderAccepted.component}
+          />
         </Navigator>
       </NavigationContainer>
     </>
