@@ -5,8 +5,6 @@
   <img width="250" src="./prints/screen_02_sign_in.png">
   <img width="250" src="./prints/screen_03_sign_up.png">
   <img width="250" src="./prints/screen_04_account_tab.png">
-</p>
-<p align="center">
   <img width="250" src="./prints/screen_05_order_accepted.png">
 </p>
 
