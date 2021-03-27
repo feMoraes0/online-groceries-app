@@ -33,6 +33,7 @@ const styles = EStyleSheet.create({
     borderRadius: 10.0,
     padding: 15.0,
     flexDirection: 'column',
+    marginRight: 15.0,
   },
   imageBox: {
     height: heightScreen * 0.11,
