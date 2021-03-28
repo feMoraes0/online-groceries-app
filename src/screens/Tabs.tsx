@@ -37,8 +37,8 @@ const Tabs = () => {
         labelStyle: style.tabBarLabelStyle,
       }}>
       <Screen name={Home.name} component={Home.component} />
-      <Screen name={Cart.name} component={Cart.component} />
       <Screen name={Explore.name} component={Explore.component} />
+      <Screen name={Cart.name} component={Cart.component} />
       <Screen name={Favourite.name} component={Favourite.component} />
       <Screen name={Account.name} component={Account.component} />
     </Navigator>
