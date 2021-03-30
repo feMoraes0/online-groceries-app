@@ -4,8 +4,10 @@
   <img width="250" src="./prints/screen_01_onboarding.png">
   <img width="250" src="./prints/screen_02_sign_in.png">
   <img width="250" src="./prints/screen_03_sign_up.png">
+  <img width="250" src="./prints/screen_06_home_screen.png">
   <img width="250" src="./prints/screen_04_account_tab.png">
   <img width="250" src="./prints/screen_05_order_accepted.png">
+  
 </p>
 
 ## :rocket: Knowledges
