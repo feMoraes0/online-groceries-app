@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image, Dimensions} from 'react-native';
+import {TouchableOpacity, Text, Image, Dimensions} from 'react-native';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 const {width: widthScreen, height: heightScreen} = Dimensions.get('screen');
@@ -8,6 +8,7 @@ interface CategoryCardProps {
   borderColour: String;
   image: any;
   title: String;
+  onPress: Function;
 }
 
 const CategoryCard = ({
@@ -15,16 +16,18 @@ const CategoryCard = ({
   borderColour,
   image,
   title,
+  onPress,
 }: CategoryCardProps) => {
   return (
-    <View
+    <TouchableOpacity
+      onPress={() => onPress()}
       style={[
         styles.card,
         {backgroundColor: bgColour, borderColor: borderColour},
       ]}>
       <Image style={styles.image} source={image} />
       <Text style={styles.text}>{title}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 
