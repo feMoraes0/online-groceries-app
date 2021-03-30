@@ -3,7 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from './tabs/Home/Home';
 import Account from './tabs/Account';
 import Cart from './tabs/Cart';
-import Explore from './tabs/Explore';
+import Explore from './tabs/Explore/Explore';
 import Favourite from './tabs/Favourite';
 import {tabIcons} from '../helpers/Icons';
 import EStyleSheet from 'react-native-extended-stylesheet';
